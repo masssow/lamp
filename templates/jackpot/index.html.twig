@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello JackpotController!{% endblock %}
+
+{% block body %}
+
+{% for jackpot in jackpot %}
+<div class="colom-montant col-md-4">
+<a href="{{ path('app_donation')}}"><div class="montant">{{ jackpot.amount1}} €</div></a>
+<a href="{{ path('app_donation')}}"><div class="montant">{{ jackpot.amount2}} €</div></a>
+<a href="{{ path('app_donation')}}"><div class="montant">{{ jackpot.amount3}} €</div></a>
+<a href="{{ path('app_donation')}}"><div class="montant">{{ jackpot.amount4}} €</div></a>
+
+{# {{ form_start(form) }} #}
+{# <button type="submit" class="btn btn-warning">Valider</button> #}
+{# {{ form_end(form) }} #}
+{# <form action="{{ path('app_donation')}}">{{ jackpot.amountFree}}
+<input type="text" name="amount-value" id="" class="form-control" method="GET">
+<button type="submit" class="btn btn-warning">Valider</button>
+</form> #}
+
+
+</div>
+{% endfor %}
+{% endblock %}

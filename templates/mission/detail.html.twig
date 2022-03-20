@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Asso Lamp - {{ mission.title}}{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+<div class="row my-5">
+    <div class="col-md-5">
+    <img src="{{ asset('images/missions/' ~ mission.imageName)}}" alt="{{mission.title}}" class="img-fluid">
+    </div>
+    <div class="col-md-7 align-self-center">
+    <h6 class="mb-2">{{ mission.title}}</h6>
+    <p>{{mission.description}}</p>
+        </div>
+    </div>
+<a href="{{ path('app_home')}}"><img src="{{ asset('images/back.png')}}" alt="retour à la page d'accueil" class=" arrow-return img-fluid my-4" height="30px"></a>
+
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}Event index{% endblock %}
+
+{% block body %}
+    <h1>Event index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Jour</th>
+                <th>Mois</th>
+                <th>Annee</th>
+                <th>Lieu</th>
+                <th>Organisée par</th>
+                <th>Image</th>
+                <th>isBest</th> 
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+                <td>{{ event.id }}</td>
+                <td>{{ event.title }}</td>
+                <td>{{ event.day}}</td>
+                <td>{{ event.month}}</td>
+                <td>{{ event.year}}</td>
+                <td>{{ event.place }}</td>
+                <td>{{ event.organizedBy }}</td>
+                <td><img src="{{ asset('images/events/' ~ event.imageName)}}" alt="" class="img-list-admin img-fluid "></td>
+                <td>{{ event.isBest ? 'yes' : 'no' }}</td>
+                    <td>
+                    <a href="{{ path('app_admin_event_show', {'id': event.id}) }}">show</a>
+                    <a href="{{ path('app_admin_event_edit', {'id': event.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_event_new') }}">Create new</a>
+{% endblock %}

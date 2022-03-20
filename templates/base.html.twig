@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo-ass.png')}}">
+            <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %} {% endblock %}
+
+    </head>
+    <body>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <main>
+            {# <div class="container-fluid"> #}
+            <header>
+                <div class="bloc1-he">
+                <div id="log">
+                <a href="{{ path('app_home')}}">
+                    <img src={{ asset("images/logo-ass.png") }} alt="" height="100px">
+                    </a>
+                </div>
+                <div class="ente-t">
+                    <h1>Association LAMP</h1> 
+                </div>   
+                <a id="hamburger_icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                
+            </div>
+            <!-- Responsive Menu -->
+            <nav id="menu">
+                <ul class="b-menu">
+                <li><a href="{{ path('app_home')}}">accueil</a></li>
+                <li><a href="{{path('app_qui_sommes')}}">qui sommes nous?</a></li>
+                <li ><a href="{{ path('app_agir')}}" >agir avec nous</a></li>
+                <li><a href="{{ path('app_events')}}"> évenements</a></li>
+                <li><a href="{{ path('app_article')}}">actualités</a></li>
+                <li><a href="{{ path('app_contact')}}">contact</a></li>
+                </ul>
+            </nav>
+            <div class="bloc2-he">
+                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank"><span class="don">
+                        Faire un don</span></a> 
+                        
+                </div> 
+            </header>
+            
+        {% block body %}{% endblock %}
+
+            <footer class="footer-custom">
+            <div class="row">
+            <div class="foot-asso col-md-4 text-center mt-3">
+            <img src={{ asset("images/logo-ass.png") }} alt="" height="100px" class="mb-3">
+            <b>Association Lamp Paris</b> <br> 
+                <b>19 Avenue de l'Italie 75013 Paris</b><br>
+            <p>Association registré RNA sous le numero: 87866589655
+            </p>
+            </div>
+            <div class="liens col-md-4 my-3">
+                <h6>Liens utiles</h6>
+                {# <i class="fa-solid fa-arrow-right"></i> #}
+                    <ul class="list-foo">
+            <a href="'https://www.ameli.fr/" target="_blank"><li class="foo-li">- Assurance maladie</li></a> 
+            <a href="https://www.caf.fr/" target="_blank"><li class="foo-li" >- Caf</li></a> 
+            <a href="'https://www.impots.gouv.fr/accueil" target="_blank"><li class="foo-li">- Finances publiques</li></a>
+            <a href="https://www.pole-emploi.fr/accueil/" target="_blank"> <li class="foo-li">- Pôle emploi</li> </a>
+            <a href="https://www.diplomatie.gouv.fr/fr/le-ministere-et-son-reseau/representations-etrangeres-en-france/" target="_blank"><li class="foo-li">- Représentations étrangères en France</li></a>
+                    </ul>
+            </div>
+            <div class="col-md-4 my-4">
+            <ul class="list-foo
+            mt-5">
+            <a href="{{ path('app_contact')}}"><li class="foo-li">Contact</li></a>
+            <a href=""><li class="foo-li"></li></a>
+            <a href="{{ path('app_article')}}"><li class="foo-li">Actualités</li></a>
+            <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank"><li class="foo-li">Faire un don</li></a>
+            <a href=""><li class="foo-li">Mentions légales</li></a>
+            </ul>
+        </div>
+        <p class="t-foo">Tous les droits réservés</p>
+        <p class="t-foo">Développé par Samba SOW - http://samba-sow.com</p> 
+    </div>
+    </footer>
+    {# </div> #}
+        </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="{{ asset('js/menu.js')}}"></script>
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>

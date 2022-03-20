@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Asso Lamp - actualités{% endblock %}
+
+{% block body %}
+
+<div class="container">
+<h3 class="text-center mt-5">Dernières actualités</h3>
+
+{% for article in article %}
+<div class="row my-5">
+<div class="col-md-7 align-self-center">
+<h6 class="mb-2">{{ article.title}}</h6>
+<a href="{{ path('app_article_detail', { 'slug': article.id} )}}"><p>{{ article.description}}</p></a>
+<span> publiée par: {{article.publishedBy}}</span>
+</div>
+<div class="col-md-5">
+<img src="{{ asset('images/articles/' ~ article.imageName )}}" alt="{{ article.title}}" class="img-fluid">
+</div>
+</div>
+
+
+{% endfor %}
+</div>
+</div>
+{% endblock %}

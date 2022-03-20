@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jackpot index{% endblock %}
+
+{% block body %}
+    <h1>Jackpot index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Amount1</th>
+                <th>Amount2</th>
+                <th>Amount3</th>
+                <th>Amount4</th>
+                <th>AmountFree</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for jackpot in jackpots %}
+            <tr>
+                <td>{{ jackpot.id }}</td>
+                <td>{{ jackpot.amount1 }} €</td>
+                <td>{{ jackpot.amount2 }} €</td>
+                <td>{{ jackpot.amount3 }} €</td>
+                <td>{{ jackpot.amount4 }} €</td>
+                <td>{{ jackpot.amountFree }} €</td>
+                <td>
+                    <a href="{{ path('app_admin_jackpot_show', {'id': jackpot.id}) }}">show</a>
+                    <a href="{{ path('app_admin_jackpot_edit', {'id': jackpot.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_jackpot_new') }}">Create new</a>
+{% endblock %}

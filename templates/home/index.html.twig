@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Asso Lamp - accueil{% endblock %}
+
+{% block body %}
+ <div class="container-fluid"> 
+  {# <video autoplay muted loop class="vid">
+            <source src="images/video.mp4" type="video/mp4">
+        </video>   #}
+  <div class="grid">
+        
+        <section class="nous">
+            <a href="{{ path('app_qui_sommes')}}">  <h3>qui sommes nous?</h3>
+                <p>L'association Lamp Paris est au service de plus défavorises... <a href="{{ path('app_qui_sommes')}}"></p></a>
+        </section>
+        
+        <div class="mission">
+            <h3>Notre mission</h3>
+            <p>
+               L'association est au service de la population et l'intégration social notamment des immigrés.
+            <a href="{{ path('app_mission')}}">Savoir plus...</a>
+            </p>
+        
+        </div>
+    
+        <section class="soutient">
+        <a href="{{ path('app_agir')}}">
+                <h3 id="agir-titre">Agir avec nous pour le développement humain</h3>
+            </a>
+                        </section>
+                
+
+                    <article>
+                            <div class="art">
+                                <img src="#" alt="">
+                                <h3>Dernières actualités</h3>
+                                    {% for article in article %}
+                                    <h6>{{ article.title}}
+                                    </h6>
+                                    
+                                <p>{{ article.description}}
+                                {% endfor %}
+                                <a href="{{ path('app_article')}}">Savoir plus...</a>
+
+                                </p>
+                                
+                                <div class="visited">
+                                <i class="fa-solid fa-eye">
+                                    
+                                </i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            </div>
+                        </article>
+                    </div>
+        
+        <section class="row">
+            {% for event in event %}
+            <div class="col-md-4 event">
+            <h2>{{ event.title}}</h2>
+                <div class="date ">
+                <div class="dateRight">
+                <div id="number">{{event.day}}</div>
+                <div id="dateText">
+                <div id="mois">{{event.month}}</div>    
+                <div id="anee">{{event.year}}</div>
+                </div>
+                </div>
+                </div>    
+            <img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid">
+            <p>{{ event.description}}</p>
+            </div>
+            {% endfor %}
+                
+        </section>
+            <div class="soutient-2">
+                <img src="#" alt="" height=""> 
+                    <h4 id="agir-titre">Nous soutenir</h4>
+                       <a href="#"> <span class="don">Faire un don</span></a> 
+                            </div>
+       
+            
+        <div class="contact">
+            <h3>Nous contacter</h3>
+            <b>21 Avenue de l'Italie</b><br>
+            <b>75012 Paris</b><br>
+            <b>France</b>
+            <h3>Connectez vous avec nous</h3>
+            <div class="reseau-s">
+           <a href="https://www.facebook.com/search/top?q=association%20lamp"> <div class="reseau"><img src="images/facebook.png" alt="" height="40px"></div></a>
+            <div class="reseau"><img src="images/instagram.png" alt="" height="40px"></div>
+            <div class="reseau"><img src="images/twitter.png" alt=""  height="40px"></div>
+        </div>
+        </div>
+    </div>
+{% endblock %}

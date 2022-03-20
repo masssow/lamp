@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Kanit&display=swap');
+
+body{
+
+    margin: 0 auto;
+}
+main{
+    position: relative;
+    min-height: 90vh;
+}
+header{
+    /* position:sticky;   */
+    background-color: #09404d ;
+    /* display: block; */
+    width: 100%;
+}
+#log{
+    display: block;
+    transform: translate(10px, 10px);
+    max-width: 100px;
+    height: auto;
+    
+}
+.entete-agir{
+   
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.arrow-return{
+    max-width: 30px;
+    height: auto;
+}
+.bloc2-he{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.don{
+    background-color:#F2A71B;
+    color:#025E73;
+    right: 0;
+    padding: 5px 60px;
+    text-transform: uppercase;
+    font: 1.5em;
+    margin-bottom: 20px;  
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+
+}.bloc1-he{
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.ente-t{
+    text-transform: uppercase;
+    color: white;
+    transform: translate(10px, 50px);
+}
+
+/* --------ADMIN---------- */
+.img-list-admin{
+    max-width: 150px;
+}
+/* ----------Start Burger Menu */
+
+/* position home link at left and hamburger at right
+#home_link {
+flex-grow: 1;
+}  */
+
+/* show responsive menu and position at the right of the screen */
+#menu {
+/* display: none; */
+margin: 0;
+right: 0;
+top: 0;
+/* height: 100vh; */
+z-index: 99;
+transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu ul{
+text-transform: uppercase;
+padding: 10px 10px;
+list-style: none;
+}
+#menu li {
+white-space: nowrap;
+color: white;
+list-style: none;
+}
+/* ******************** HAMBURGER ICON ******************** */
+/* define size and position of the hamburger link */
+#hamburger_icon {
+display: block;
+position: relative;
+margin: 16px;
+width: 33px;
+height: 28px;
+z-index: 100;
+user-select: none;
+cursor: pointer;
+right: 0;
+}
+/* define the style (size, color, position, animation, ...) of the 3 spans */
+#hamburger_icon span {
+display: block;
+position: absolute;
+height: 4px;
+width: 100%;
+margin-bottom: 5px;
+background: #ededed;
+border-radius: 3px;
+z-index: 100;
+opacity: 1;
+left: 0;
+transform: rotate(0deg);
+transition: 0.25s ease-in-out;
+}
+/* set the 3 spans position to look like a hamburger */
+#hamburger_icon span:nth-child(1) {
+top: 0px;
+transform-origin: left top;
+}
+#hamburger_icon span:nth-child(2) {
+top: 12px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+#hamburger_icon span:nth-child(3) {
+top: 24px;
+-webkit-transform-origin: left bottom;
+-moz-transform-origin: left bottom;
+-o-transform-origin: left bottom;
+transform-origin: left bottom;
+}
+/* change color when opening the menu */
+#hamburger_icon.open span {
+background: rgb(245, 245, 245);
+}
+/* the first span rotates 45° \ */
+#hamburger_icon.open span:nth-child(1) {
+width: 110%;
+
+transform: rotate(45deg);
+}
+/* the second span disappears */
+#hamburger_icon.open span:nth-child(2) {
+width: 0%;
+opacity: 0;
+}
+/* the last span rotates -45° / */
+#hamburger_icon.open span:nth-child(3) {
+width    : 110%;
+transform: rotate(-45deg);
+}
+/* ------Fin Burger Menu */
+
+.full-screen-menu{
+    background-color: #282921ea;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    
+}
+.full-screen-menu, ul{
+    margin-right: 0;
+    position: absolute;
+    right:  30%;
+
+}  
+.full-screen-menu,li{
+    color: white;
+    right: 0 ;
+    font-size: large;
+    letter-spacing: 4px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* .full-screen-menu:hover{
+    color: #0078b4;
+} */
+h1, h2{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+h3{
+    font-family: 'Exo 2', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #011F26;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+h4{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+
+}
+h5{
+    color:  #011F26;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+h6{
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+p{
+    font-family: 'Exo 2', sans-serif;
+    width: 80%;
+    text-align: center;
+    color: black;
+}
+/* a{
+    text-decoration: none;
+} */
+.form-check{
+    background-color: #011F26;
+    color: white;
+}
+video{
+    /* min-width: 100%;
+    min-height: 100%; */
+    height: auto;
+    width: 100%;
+    /* position: absolute; */
+    z-index: -99;
+    background-size: cover;
+    display: block;
+    opacity: 0.6;
+}
+.nous{
+    font-family: 'Exo 2', sans-serif;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 20px 20px;
+    /* opacity: 0.8; */
+    /* background-image: linear-gradient(#dbd3af9b,#dbd3af9b) ,url(../images/qui_sommes.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+}
+.mission{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding: 20px 20px 20px 20px;
+    min-height: 200px;
+    background: linear-gradient(#BFB78F, #d3c892);
+}
+ .card-mission{
+    background-color: #A5A692;
+    padding: 20px;
+    font-family: 'Exo 2', sans-serif;
+    margin: 20px;
+ }
+.soutient{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#d357579b,#e439399b) ,url(../images/volontaires.jpg);
+    padding-top: 20px;
+    padding: 20px 20px 20px 20px;
+    min-height: 300px;  
+}
+.soutient-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#d357579b,#e439399b) ,url(../images/pexels-bruna-saito-1805843.jpg);
+    padding-top: 20px;
+    padding: 20px 20px 20px 20px;
+    min-height: 300px;  
+}
+#agir-titre{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+.agi{
+    min-height: 400px;
+    border-radius: 5px;
+    
+}
+.entete-agir{
+    background-image: url(../images/mikael-blomkvist.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: auto;
+}
+/* .event{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+} */
+.date{
+    display: flex;
+    /* align-items: center; */
+    justify-content: start;
+    /* align-items: flex-start; */
+}
+.dateRight{
+    display: flex;
+    align-items: center;
+}
+
+#mois{
+    
+    font-family: 'Exo 2', sans-serif;
+    
+
+}
+#anee{
+    font-size: 1em;
+    display: block;
+    align-self: flex-end;
+    z-index: 5;
+    font-family: 'Exo 2', sans-serif;
+}
+#number{
+    font-size: 2.5em;
+    text-align: start;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400
+
+}
+
+#event-un{
+    width: 80%;
+
+}
+#event-deux{
+    width: 80%;
+
+}
+#inscri{
+    background-color: #011F26;
+    color: white;
+    border-radius: 30px;
+    padding: 20px 80px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.art{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding: 20px 20px 20px 20px;
+    color: #011F26 ;
+    background-color: rgb(161, 138, 108);
+
+}
+.image-art{
+    position: relative;
+}
+.fa-solid .fa-eye{
+    left: 0;
+}
+.contact{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: #A5A692;
+}
+.reseau{
+    display: block;
+    margin: 20px 20px;
+}
+.reseau-s{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.colom-montant{
+    min-height: 80vh;
+    background-color: #A5A692;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+.montant{
+    margin: 20px;
+    background-color: #ededed;
+    /* padding: 10px ; */
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+
+}
+.montant:hover{
+    background-color: #F2A71B;
+    color: white;
+
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+footer{
+    width:100%
+}
+.footer-custom
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #025E73;
+    bottom: 0;
+}
+.registre{
+    font-size:1em;
+}
+.t-foo{
+    font-size: 0.7em;
+    margin-top: 0%;
+}
+
+
+
+    /* ---------MEDIA QUERYS-------------- */
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) { 
+    .bloc2-he{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+    .don{
+        padding: 5px 60px;
+        margin-bottom: 20px;  
+        transform: translate(30px);
+
+    }.bloc1-he{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .ente-t{
+        transform: translate(10px,30px);
+    }
+}
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {  }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) { 
+        .bloc2-he{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .don{
+            padding: 5px 60px;
+            margin-bottom: 20px;  
+            transform: translate(30px);
+    
+        }
+        .don:hover{
+            background-color: #09404d;
+            transition: 0.3s;
+        }
+        .bloc1-he{
+            display: flex;
+            justify-content: space-between;
+        }
+        .ente-t{
+            transform: translate(-50px,30px);
+        }
+        .bloc2-he{
+            margin-top: 0;
+        }
+    
+        /*-----------------------NavBar----------------------- */
+
+   
+    nav, ul {
+    display: inline-flex;
+    position: relative;
+    list-style-type: none;
+    right:  0;
+    }
+    
+    nav, li{
+        color: white;
+        /* margin-top: 10px; */
+        text-decoration: none;
+        margin-left: 10px;
+        font-size: 1em;
+    }
+    
+    /* .nav:hover {
+        color: #0078b4;
+    } */
+    /* hide responsive menu */
+    #hamburger_icon{
+        display: none;
+    }
+    .grid{
+        display:grid;
+        grid-template-columns: 50% 50%  ;
+        justify-content: center;
+        margin-top: 20px;
+    }   
+    .soutient-2{
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+        /* background-image: linear-gradient(#d357579b,#e439399b) ,url(../images/pexels-bruna-saito-1805843.jpg); */
+        /* padding-top: 20px;
+        padding: 20px 20px 20px 20px; */
+        min-height: 150px;  
+        background-attachment: fixed;
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+    .detail-miss{
+        text-align: center;
+    }
+    .date{
+        display: flex;
+        /* align-items: center; */
+        justify-content: start;
+        /* align-items: flex-start; */
+    }
+    .dateRight{
+        display: flex;
+        align-items: center;
+    }
+    .footer{
+        width: 100%;
+    }
+    .list-foo
+    {
+        list-style: none;
+        flex-direction: column;
+        color: black;
+    }
+    a,li, .foo-li{
+        color: #011F26;
+        text-decoration: none;
+    }
+    a,li, .foo-li:hover{
+        color: aliceblue;
+    }
+    .foot-asso{
+        
+    }
+
+}
+
+    /* X-Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {  }
+
+    /* XX-Large devices (larger desktops, 1400px and up) */
+    @media (min-width: 1400px) {  }

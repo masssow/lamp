@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Asso Lamp - Qui sommes nous{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+<div class="row my-5">
+<div class="col-md-7 align-self-center text-center">
+<H2 class="text-center">Qui sommes nous?</H2>
+<p class="text-center">L'association Lamp Paris est au service de plus défavorises notamment les immigrés. 
+Elle les assiste et les oriente dans ces domaines d'interventions.</p>
+</div>
+<div class="col-md-5">
+<img id="log"src="{{ asset('images/logo-ass.png')}}" alt="logo Association" class="img-fluid">
+</div>
+
+
+</div>
+
+<div class="row">
+<div class="col-md-5 mb-3">
+<img src="{{ asset('images/president_asso.jpg')}}" alt="logo Association" class="img-fluid">
+</div>
+
+<div class="col-md-7 align-self-center">
+
+<p><strong>LAMP POUR LE DEVELOPPEMENT DU SENEGAL</strong> est né le 13 Octobre 2010 à Paris, à l’initiative de ressortissants sénégalais expatriés, soucieux de contribuer au rayonnement et au développement économique et culturel du Sénégal dans le monde.
+
+    ​
+    
+    Serigne Cheikh Khady Fall, le président d’honneur, fut adopté le 5 Mai 2011 a l’issue d'’une assemblée extraordinaire de l’association, engagé à aider les plus démunis et à leur intégration sociale, notamment pour les immigrés. Toujours dans la première ligne d'action</p>
+</div>
+</div>
+<a href="{{ path('app_home')}}"><img src="{{ asset('images/back.png')}}" alt="retour à la page d'accueil" class=" arrow-return img-fluid my-4" height="30px"></a>
+</div>
+{% endblock %}
