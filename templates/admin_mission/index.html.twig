@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base-admin.html.twig' %}
 
 {% block title %}Mission index{% endblock %}
 
@@ -27,8 +27,8 @@
                 <td>{{ mission.updatedAt ? mission.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ mission.isBest ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('app_admin_mission_show', {'id': mission.id}) }}">show</a>
-                    <a href="{{ path('app_admin_mission_edit', {'id': mission.id}) }}">edit</a>
+                    <a href="{{ path('app_admin_mission_show', {'id': mission.id}) }}"><i class="fa-solid fa-eye"></i></a>
+                    <a href="{{ path('app_admin_mission_edit', {'id': mission.id}) }}"><i class="fa-solid fa-pencil"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -39,5 +39,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_mission_new') }}">Create new</a>
+    <a href="{{ path('app_admin_mission_new') }}" class="btn btn-danger">Nouvelle Mission</a>
 {% endblock %}

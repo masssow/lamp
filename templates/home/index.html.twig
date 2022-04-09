@@ -3,37 +3,37 @@
 {% block title %}Asso Lamp - accueil{% endblock %}
 
 {% block body %}
- <div class="container-fluid"> 
+<div class="container-fluid"> 
   {# <video autoplay muted loop class="vid">
             <source src="images/video.mp4" type="video/mp4">
         </video>   #}
-  <div class="grid">
-        
-        <section class="nous">
-            <a href="{{ path('app_qui_sommes')}}">  <h3>qui sommes nous?</h3>
-                <p>L'association Lamp Paris est au service de plus défavorises... <a href="{{ path('app_qui_sommes')}}"></p></a>
+    <div class="home row">
+        <section class="nous col-md-6">
+            <a href="{{ path('app_qui_sommes')}}"><h3 class="lien-titre">qui sommes nous?</h3>
+            <p class="lien-present">L'association Lamp Paris est au service de plus défavorises... </p></a>
         </section>
         
-        <div class="mission">
-            <h3>Notre mission</h3>
-            <p>
-               L'association est au service de la population et l'intégration social notamment des immigrés.
-            <a href="{{ path('app_mission')}}">Savoir plus...</a>
-            </p>
+        <div class="mission  col-md-6">
+            <a href="{{ path('app_mission')}}"><h3 class="lien-titre" id="mission-titre">Notre mission</h3></a>
+            <a href="{{ path('app_mission')}}">
+                <p class="lien-present" id="mission-text">
+                L'association est au service de la population et l'intégration social notamment des immigrés.
+                Savoir plus...
+                </p></a>
         
         </div>
     
-        <section class="soutient">
-        <a href="{{ path('app_agir')}}">
+        <section class="soutient col-md-6">
+        <a href="{{ path('app_agir')}}" class="lien-titre">
                 <h3 id="agir-titre">Agir avec nous pour le développement humain</h3>
             </a>
                         </section>
                 
 
-                    <article>
-                            <div class="art">
+                    <article class="actu col-md-6" >
+                            <div >
                                 <img src="#" alt="">
-                                <h3>Dernières actualités</h3>
+                                <h3 class="lien-titre">Dernières actualités</h3>
                                     {% for article in article %}
                                     <h6>{{ article.title}}
                                     </h6>
@@ -44,12 +44,12 @@
 
                                 </p>
                                 
-                                <div class="visited">
+                                {# <div class="visited">
                                 <i class="fa-solid fa-eye">
                                     
                                 </i>
                                 <i class="fa-solid fa-heart"></i>
-                            </div>
+                            </div> #}
                             </div>
                         </article>
                     </div>
@@ -76,18 +76,19 @@
             <div class="soutient-2">
                 <img src="#" alt="" height=""> 
                     <h4 id="agir-titre">Nous soutenir</h4>
-                       <a href="#"> <span class="don">Faire un don</span></a> 
+                    <span class="don"><a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank">
+                    Faire un don</a></span> 
                             </div>
        
             
         <div class="contact">
             <h3>Nous contacter</h3>
-            <b>21 Avenue de l'Italie</b><br>
-            <b>75012 Paris</b><br>
-            <b>France</b>
+            <p>21 Avenue de l'Italie<br>
+                75012 Paris<br>
+                France</p>
             <h3>Connectez vous avec nous</h3>
             <div class="reseau-s">
-           <a href="https://www.facebook.com/search/top?q=association%20lamp"> <div class="reseau"><img src="images/facebook.png" alt="" height="40px"></div></a>
+           <a href="https://www.facebook.com/search/top?q=association%20lamp" target="_blank"> <div class="reseau"><img src="images/facebook.png" alt="" height="40px"></div></a>
             <div class="reseau"><img src="images/instagram.png" alt="" height="40px"></div>
             <div class="reseau"><img src="images/twitter.png" alt=""  height="40px"></div>
         </div>
