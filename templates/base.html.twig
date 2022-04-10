@@ -6,7 +6,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
             <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo-ass.png')}}">
-            <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/admin.min.css')}}">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %} {% endblock %}
 
@@ -28,7 +28,7 @@
                     </a>
                 </div>
                 <div class="ente-t">
-                    <h1>Association LAMP</h1> 
+                    <h1>Association lamp</h1> 
                 </div>   
                 <a id="hamburger_icon">
                     <span></span>
@@ -40,52 +40,59 @@
             <!-- Responsive Menu -->
             <nav id="menu">
                 <ul class="b-menu">
-                <li><a href="{{ path('app_home')}}">accueil</a></li>
-                <li><a href="{{path('app_qui_sommes')}}">qui sommes nous?</a></li>
-                <li ><a href="{{ path('app_agir')}}" >agir avec nous</a></li>
-                <li><a href="{{ path('app_events')}}"> évenements</a></li>
-                <li><a href="{{ path('app_article')}}">actualités</a></li>
-                <li><a href="{{ path('app_contact')}}">contact</a></li>
+                <li class="menu-li"><a class="menu-lien" href="{{ path('app_home')}}">accueil</a></li>
+                <li class="menu-li"><a class="menu-lien" href="{{ path('app_qui_sommes')}}">qui sommes nous?</a></li>
+                <li class="menu-li"><a class="menu-lien" href="{{ path('app_agir')}}" >agir avec nous</a></li>
+                <li class="menu-li"><a class="menu-lien" href="{{ path('app_events')}}"> évenements</a></li>
+                <li class="menu-li"><a class="menu-lien" href="{{ path('app_article')}}">actualités</a></li>
+                <li class="menu-li"><a class="menu-lien" href="{{ path('app_contact')}}">contact</a></li>
                 </ul>
             </nav>
             <div class="bloc2-he">
-                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank"><span class="don">
-                        Faire un don</span></a> 
+            <span class="don">
+                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank">
+                        Faire un don</a> </span>
                         
                 </div> 
             </header>
             
         {% block body %}{% endblock %}
             </div>
+     
             <footer>
-            <div class="footer-custom row">
-            <div class="foot-asso col-md-4 mt-3">
-            <img src={{ asset("images/logo-ass.png") }} alt="" height="100px" class="mb-3">
-            <b> Association Lamp Paris <br>
-            19 Avenue de l'Italie 75013 Paris</b><br>
-            <p class="">Lamp Paris est une association de loi 1901 (SIRET n°000 000 000 00000 et RNA n°W00000000). Chaque don ouvre droit à une réduction d’impôts égale à 66% du montant du don, dans la limite de 20% de votre revenu imposable.
-            </p><br>   
-            {# <p>Association registré RNA sous le numero: 87866589655 #}
-            </p>
-            </div>
-            <div class="liens col-lg-4">
-        <h6 class="text-center">Liens utiles</h6>
-            <ul class="list-foo text-center">
-<a href="'https://www.ameli.fr/" target="_blank"><li class="foo-li">- Assurance maladie</li></a> 
-<a href="https://www.caf.fr/" target="_blank"><li class="foo-li" >- Caf</li></a> 
-<a href="'https://www.impots.gouv.fr/accueil" target="_blank"><li class="foo-li">- Finances publiques</a></li>
-<a href="https://www.pole-emploi.fr/accueil/" target="_blank"><li class="foo-li">- Pôle emploi</li></a>
-<a href="https://www.diplomatie.gouv.fr/fr/le-ministere-et-son-reseau/representations-etrangeres-en-france/" target="_blank"><li class="foo-li">- Représentations étrangères en France</li></a>
-    </ul>
-</div>
-            <div class="col-md-4">
-        </div>
+                <div class="footer-custom row">
+                <div class="col-md-3 mt-3 text-center">
+                <a href="{{ path('app_home')}}">
+                <img src={{ asset("images/logo-ass.png") }} alt="" height="100px" class="mb-3">
+                </a>
+                <strong><p>Association Lamp Paris <br>
+                19 Avenue de l'Italie 75013 Paris<br></p></strong>
+                </p><br> 
+                    <p class="">Lamp Paris est une association de loi 1901 (SIRET n°000 000 000 00000 et RNA n°W00000000). Chaque don ouvre droit à une réduction d’impôts égale à 66% du montant du don, dans la limite de 20% de votre revenu imposable.
+                    </p><br>
+                </div>
+            <div class="liens col-md-4 mt-3  text-center">
+                <h6 class="">Liens utiles</h6>
+            <ul class="list-foo ">
+        <li class="foo-li"><a class="lie-li" href="'https://www.ameli.fr/" target="_blank">- Assurance maladie</a></li>
+        <li class="foo-li" ><a class="lie-li" href="https://www.caf.fr/" target="_blank">- Caf</a></li>
+        <li class="foo-li"><a class="lie-li" href="'https://www.impots.gouv.fr/accueil" target="_blank">- Finances publiques</a></li>
+        <li class="foo-li"><a class="lie-li" href="https://www.pole-emploi.fr/accueil/" target="_blank">- Pôle emploi</a></li>
+        <li class="foo-li"><a class="lie-li" href="https://www.diplomatie.gouv.fr/fr/le-ministere-et-son-reseau/representations-etrangeres-en-france/" target="_blank">- Représentations étrangères</a></li>
+        </ul>
     </div>
-        <p class="t-foo">Tous les droits réservés</p>
-        <p class="t-foo">Développé par Samba SOW - http://samba-sow.com</p> 
+    <div class="col-md-4 text-center mt-5">
+            <ul class="list-foo">
+            <li class="foo-li"><a class="lie-li" href="{{ path('app_article')}}">- Actualités</a></li>
+            <li class="foo-li"><a class="lie-li" href="{{ path('app_events')}}">- Evenements</a></li>
+            <li class="foo-li"><a class="lie-li" href="{{ path('app_contact')}}">- Contact</a></li>
+            <li class="foo-li"><a class="lie-li" href="{{ path('app_c_g_u')}}">- CGU (Conditions Générales d'Utilisation)</a></li>
+            </ul>
+        </div>
+</div>  {# .footer-custom .row #}
 </footer>
-</main>
 
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

@@ -3,11 +3,12 @@
 {% block title %}Edit Event{% endblock %}
 
 {% block body %}
+<a href="{{ path('app_admin_event_index') }}" class="btn btn-sm btn-secondary float-end my-3">Retour liste</a>
+
     <h1>Edit Event</h1>
 
     {{ include('admin_event/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_admin_event_index') }}">back to list</a>
 
     {{ include('admin_event/_delete_form.html.twig') }}
 {% endblock %}
