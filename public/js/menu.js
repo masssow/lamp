@@ -13,16 +13,11 @@ bt.addEventListener("click", function(){
         menu.style.display = "none";
         this.classList.remove(".bt-menu-open");
         this.classList.remove("open");
-
-
     };
 });
 
 window.onload = function(){
-    console.log("chargement ok");   
-
-
-    
+    console.log("chargement ok");       
 }
 // bt.classList.add("open");
 function initMenu(){
@@ -35,7 +30,6 @@ function initMenu(){
         bt.style.display = "none";
         menu.style.display = "block";
         menu.classList.remove('full-screen-menu')
-
     }
 }
 

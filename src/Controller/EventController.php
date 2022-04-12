@@ -18,4 +18,13 @@ class EventController extends AbstractController
             'events' => $events
         ]);
     }
+
+    #[Route('/evenement/{slug}', name: 'app_event_detail')]
+    public function detail(EventRepository $eventRepository, int $slug): Response
+    {
+
+        return $this->render('evenements/detail.html.twig', [
+            'event' => $eventRepository->find($slug)
+        ]);
+    }
 }

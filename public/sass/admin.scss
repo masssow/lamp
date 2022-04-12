@@ -17,6 +17,9 @@ main{
 a{
     text-decoration: none;
 }
+.img-list-admin{
+    max-width: 150px;
+}
 
 /* ----------Start Burger Menu */
 
@@ -130,6 +133,18 @@ header{
     background-color: #09404d ;
     /* display: block; */
     width: 100%;
+}video{
+    // min-height: 100%; 
+    height: auto;
+    width: 100%;
+    // position: absolute;
+    z-index: -99;
+    background-size: cover;
+    display: block;
+    opacity: 0.6;
+    left: 0;
+    top:15%;
+
 }#log{
     display: block;
     transform: translate(10px, 10px);
@@ -150,7 +165,6 @@ header{
     justify-content: space-between;
 }.don{
     background-color:#F2A71B;
-    color:#025E73;
     padding: 5px 60px;
     text-transform: uppercase;
     margin-bottom: 20px;  
@@ -160,10 +174,13 @@ header{
     padding: 5px 60px;
     margin-bottom: 20px;  
     transform: translate(30px);
+    border-radius: 50px;
 }.don:hover{
-    background-color:#0078b4;
+    background-color:#011F26;
     color: white;
     transition: 0.6s;
+}.don-li{
+    color:#011F26;
 }.ente-t{
     text-transform: uppercase;
     color: white;
@@ -171,21 +188,18 @@ header{
 }.lien-titre{
     text-transform: uppercase;
     color: var(--text);
-
 }
 .lien-present{
     color: #011F26;
 }.nous{
-    font-family: 'Exo 2', sans-serif;
     display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px 20px 20px 20px;
     color: #011F26;
-    background-color: var(--primary);
+    background-image: linear-gradient(#cdc5c558,#cdc5c5db) ,url(../images/mikael-blomkvist.jpg);
     min-height: 300px;
-
 }.mission{
     display: flex;
     flex-direction: column;
@@ -193,10 +207,17 @@ header{
     justify-content: center;
     padding: 20px 20px 20px 20px;
     min-height: 300px;
-    background: linear-gradient(#d3c892, #d357579b);
+    background: #d3c892;
     color: #011F26;
 }#mission-titre, #mission-text{
     color: white;
+}.card-mission{
+    background-color:  #BFB78F;;
+    // padding: 5px;
+    font-family: 'Exo 2', sans-serif;
+    margin: 20px;
+    max-width: 350px;
+    height: auto;
 }
 .soutient{
     display: flex;
@@ -206,6 +227,7 @@ header{
     background-image: linear-gradient(#d357579b,#e439399b) ,url(../images/volontaires.jpg);
     padding: 20px 20px 20px 20px;
     min-height: 300px;  
+    background-repeat: no-repeat;
 }
 .slogan-soutien{
     color: white;
@@ -215,7 +237,22 @@ header{
     align-items: center;
     justify-content: center;
     min-height: 300px;  
-}.soutient-2{
+}
+// ########## SLIDE-IN ######
+.slide-left{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: ease-in-out 0.6s;
+}
+.slide-right{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in-out;
+}.active{
+    opacity: 1;
+    transform:translateX(0%);
+} 
+.soutient-2{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -247,6 +284,10 @@ header{
     color: white;
 }
 // Date evenements
+#event-titre{
+    text-transform: uppercase;
+    color: #011F26;
+}
 .date{
     display: flex;
     /* align-items: center; */
@@ -281,9 +322,6 @@ header{
     max-width: 30px;
     height: auto;
 }
-
-
-
 footer{
     width: 100%;
     bottom: 0;
@@ -319,16 +357,66 @@ footer{
             right:  30%;
             list-style: none;
             margin-top: 20px;
-        
+        }
+        .img-list-admin{
+            max-width: 150px;
         }
      }
 
     /* Large devices (desktops, 992px and up) */
     @media (min-width: 992px) { 
-        
-    
+        .bloc1-he{
+            display: flex;
+            justify-content: space-between;
+        }.bloc2-he{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }.ente-t{
+            transform: translate(-50px,30px);
+        }.img-list-admin{
+            max-width: 150px;
+            height: auto;
+        }
         /*-----------------------NavBar----------------------- */
-
+        nav, .b-menu {
+            display: inline-flex;
+            position: relative;
+            list-style-type: none;
+            left: 0 ;
+            right: 0 auto;
+            transform: translateY(20%);
+        } nav, .menu-li{
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: small;
+        }.menu-lien{
+            background-color: #c2cd7700;
+            padding-left: 3px;
+            transition: 0.4s;
+        }.menu-lien:hover{
+            color: #011F26;
+        }video{
+            // max-height: 200px; 
+             height: auto;
+            width: 100%;
+             position: absolute;
+            z-index: -99;
+            background-size: cover;
+            display: block;
+            opacity: 0.6;
+            top: 500px;
+        }.mission{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px 20px 20px;
+            min-height: 300px;
+            background: #d3c892;
+            color: #011F26;
+        }
 }
 
     /* X-Large devices (large desktops, 1200px and up) */

@@ -4,17 +4,17 @@
 
 {% block body %}
 <div class="container-fluid"> 
-  {# <video autoplay muted loop class="vid">
-            <source src="images/video.mp4" type="video/mp4">
-        </video>   #}
+   {# <video autoplay muted loop class="vid">
+            <source src="images/production.mp4" type="video/mp4">
+        </video>    #}
     <div class="home row">
         <section class="nous col-md-6">
-            <a href="{{ path('app_qui_sommes')}}"><h3 class="lien-titre">qui sommes nous?</h3>
+            <a href="{{ path('app_qui_sommes')}}"><h2 class="lien-titre">qui sommes nous?</h2>
             <p class="lien-present">L'association Lamp Paris est au service de plus défavorises... </p></a>
         </section>
-        
+       
         <div class="mission  col-md-6">
-            <a href="{{ path('app_mission')}}"><h3 class="lien-titre" id="mission-titre">Notre mission</h3></a>
+            <a href="{{ path('app_mission')}}"><h2 class="lien-titre" id="mission-titre">Notre mission</h2></a>
             <a href="{{ path('app_mission')}}">
                 <p class="lien-present" id="mission-text">
                 L'association est au service de la population et l'intégration social notamment des immigrés.
@@ -23,66 +23,67 @@
         
         </div>
     
-        <section class="soutient col-md-6">
+        <section class="soutient col-md-6 ">
         <a href="{{ path('app_agir')}}" class="lien-titre">
-                <h3 id="agir-titre">Agir avec nous pour le développement humain</h3>
+                <h2 id="agir-titre">Agir avec nous pour le développement humain</h2>
             </a>
                         </section>
-                
-
-                    <article class="actu col-md-6" >
-                            <div >
-                                <img src="#" alt="">
-                                <h3 class="lien-titre">Dernières actualités</h3>
-                                    {% for article in article %}
-                                    <h6>{{ article.title}}
-                                    </h6>
-                                    
-                                <p>{{ article.description}}
-                                {% endfor %}
-                                <a href="{{ path('app_article')}}">Savoir plus...</a>
-
-                                </p>
+                        <article class="actu col-md-6" >
+                        <div >
+                            <img src="#" alt="">
+                            <h2 class="lien-titre " >Actualités</h2>
+                                {% for article in article %}
+                                <h3>{{ article.title}}
+                                </h3>
                                 
-                                {# <div class="visited">
-                                <i class="fa-solid fa-eye">
-                                    
-                                </i>
-                                <i class="fa-solid fa-heart"></i>
-                            </div> #}
-                            </div>
-                        </article>
-                    </div>
-        
-        <section class="row">
+                            <p>{{ article.description}}
+                            {% endfor %}
+                            <a href="{{ path('app_article')}}">Savoir plus...</a>
+
+                            </p>
+                            
+                            {# <div class="visited">
+                            <i class="fa-solid fa-eye">
+                                
+                            </i>
+                            <i class="fa-solid fa-heart"></i>
+                        </div> #}
+                        </div>
+                    </article>
+                    </div> {# home .row  #}
+                   
+        <section class="row mt-5">
+                <h2 id="event-titre ">Evenements</h2>
             {% for event in event %}
-            <div class="col-md-4 event">
-            <h2>{{ event.title}}</h2>
-                <div class="date ">
-                <div class="dateRight">
-                <div id="number">{{event.day}}</div>
-                <div id="dateText">
-                <div id="mois">{{event.month}}</div>    
-                <div id="anee">{{event.year}}</div>
-                </div>
-                </div>
-                </div>    
+            <div class="col-md-6 col-lg-4 event">
+            <h3>{{ event.title}}</h3> 
             <img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid">
-            <p>{{ event.description}}</p>
+            <div class="date ">
+            <div class="dateRight">
+            <div id="number">{{event.day}}</div>
+            <div id="dateText">
+            <div id="mois">{{event.month}}</div>    
+            <div id="anee">{{event.year}}</div>
+            </div>
+            </div>
+            </div> 
+            <a href="{{ path('app_event_detail', {'slug': event.id} )}}">
+            <span class="btn btn-dark mb-5 d-grid gap-2 col-4 mx-auto ">Savoir plus</span>
+            </a>  
             </div>
             {% endfor %}
-                
+                <a href="{{ path('app_events')}}" class="btn btn-secondary col-3 my-3 mx-auto">Voir tous les evenements</a>
         </section>
             <div class="soutient-2">
                 <img src="#" alt="" height=""> 
-                    <h4 id="agir-titre">Nous soutenir</h4>
-                    <span class="don"><a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank">
-                    Faire un don</a></span> 
+                    <h2 id="agir-titre">Nous soutenir</h2>
+                   <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li"><span class="don">
+                    Faire un don</span></a>
                             </div>
        
             
-        <div class="contact">
-            <h3>Nous contacter</h3>
+        <div class="contact slide-left">
+            <h2>Nous contacter</h2>
             <p>21 Avenue de l'Italie<br>
                 75012 Paris<br>
                 France</p>

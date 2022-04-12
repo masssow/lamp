@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Asso Lamp - Evenements{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+<div class="row my-5">
+<h1 class="text-center mt-4">{{ event.title}}</h1>
+<div class="date ">
+<div class="dateRight">
+<div id="number">{{event.day}}</div>
+<div id="dateText">
+<div id="mois">{{event.month}}</div>    
+<div id="anee">{{event.year}}</div>
+</div> 
+</div>
+</div>  
+<div class="col-md-5 event">
+<img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid mx-auto d-block" height="100px">
+<div class="col-md-7 align-self-center">
+    </div>{# .col-md-7 #}
+<p>{{ event.description}}</p>
+</div>
+    
+</div>
+</div>
+
+<a href="{{ path('app_events')}}"><img src="{{ asset('images/back.png')}}" alt="retour à la page d'accueil" class=" arrow-return img-fluid mx-auto d-block my-4" height="30px"></a>
+{% endblock %}

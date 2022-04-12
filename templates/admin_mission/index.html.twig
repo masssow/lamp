@@ -4,8 +4,7 @@
 
 {% block body %}
 
-    <h1>Mission index</h1>
-
+    <h1>Liste de missions </h1>
     <table class="table">
         <thead>
             <tr>
@@ -23,7 +22,7 @@
                 <td>{{ mission.id }}</td>
                 <td>{{ mission.title }}</td>
                 {# <td>{{ mission.description }}</td> #}
-                <td><img src="{{ asset('images/missions/' ~ mission.imageName)}}" alt="" class="img-list-admin img-fluid "></td>
+                <td><img src="{{ asset('images/missions/' ~ mission.imageName)}}" alt="" class="img-list-admin"></td>
                 {# <td>{{ mission.imageSize }}</td> #}
                 <td>{{ mission.updatedAt ? mission.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ mission.isBest ? 'Yes' : 'No' }}</td>
@@ -40,5 +39,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_mission_new') }}" class="btn btn-danger">Nouvelle Mission</a>
+    <a href="{{ path('app_admin_mission_new') }}" class="btn btn-danger my-3">Nouvelle Mission</a>
 {% endblock %}

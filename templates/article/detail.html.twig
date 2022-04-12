@@ -4,23 +4,21 @@
 
 {% block body %}
 
-<div class="container">
+<div class="container-fluid">
 
-<h6 class=" text-center mt-5">{{ article.title}}</h6>
-
-{% for article in article %}
 <div class="row my-5">
+<div class="col-md-5">
+<img src="{{ asset('images/articles/' ~ article.imageName )}}" alt="{{ article.title}}" class="img-fluid d-block mx-auto">
+</div>
 <div class="col-md-7 align-self-center">
-
+<h3 class=" text-center mt-5">{{ article.title}}</h3>
 <p>{{ article.description}}</p></a>
 <span> publiée par: {{article.publishedBy}}</span>
 </div>
-<div class="col-md-5">
-<img src="{{ asset('images/articles/' ~ article.imageName )}}" alt="{{ article.title}}" class="img-fluid">
-</div>
+
 </div>
 
-{% endfor %}
+
 </div>
 </div>
 {% endblock %}

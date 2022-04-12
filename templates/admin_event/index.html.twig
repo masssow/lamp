@@ -30,7 +30,7 @@
                 <td>{{ event.year}}</td>
                 <td>{{ event.place }}</td>
                 <td>{{ event.organizedBy }}</td>
-                <td><img src="{{ asset('images/events/' ~ event.imageName)}}" alt="" class="img-list-admin img-fluid "></td>
+                <td><img src="{{ asset('images/events/' ~ event.imageName)}}" alt="" class="img-list-admin img-fluid"></td>
                 <td>{{ event.isBest ? 'yes' : 'no' }}</td>
                     <td>
                     <a href="{{ path('app_admin_event_show', {'id': event.id}) }}"><i class="fa-solid fa-eye"></i></a>

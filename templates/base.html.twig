@@ -49,9 +49,9 @@
                 </ul>
             </nav>
             <div class="bloc2-he">
-            <span class="don">
-                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank">
-                        Faire un don</a> </span>
+            
+                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li"><span class="don">
+                        Faire un don</span></a> 
                         
                 </div> 
             </header>
@@ -71,7 +71,7 @@
                     <p class="">Lamp Paris est une association de loi 1901 (SIRET n°000 000 000 00000 et RNA n°W00000000). Chaque don ouvre droit à une réduction d’impôts égale à 66% du montant du don, dans la limite de 20% de votre revenu imposable.
                     </p><br>
                 </div>
-            <div class="liens col-md-4 mt-3  text-center">
+            <div class="liens col-md-4 mt-5 text-center">
                 <h6 class="">Liens utiles</h6>
             <ul class="list-foo ">
         <li class="foo-li"><a class="lie-li" href="'https://www.ameli.fr/" target="_blank">- Assurance maladie</a></li>
@@ -89,6 +89,7 @@
             <li class="foo-li"><a class="lie-li" href="{{ path('app_c_g_u')}}">- CGU (Conditions Générales d'Utilisation)</a></li>
             </ul>
         </div>
+    <p class="t-foo text-center"><img src="{{asset('images/droits-dauteur.png')}}" alt="" height="12px"> 2022 <strong>Association Lamp</strong>. Tout les droits réservés</p> 
 </div>  {# .footer-custom .row #}
 </footer>
 
@@ -97,6 +98,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script src="{{ asset('js/menu.js')}}"></script>
+<script src="{{ asset('js/slide.js')}}"></script>
     {% block javascripts %}{% endblock %}
 
 </body>

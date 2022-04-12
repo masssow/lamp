@@ -9,10 +9,10 @@
 
 {% for article in article %}
 <div class="row my-5"><div class="col-md-5">
-<img src="{{ asset('images/articles/' ~ article.imageName )}}" alt="{{ article.title}}" class="img-fluid mx-auto d-block">
+<img src="{{ asset('images/articles/' ~ article.imageName )}}" alt="{{ article.title}}" class="img-fluid mx-auto d-block my-3">
 </div>
 <div class="col-md-7 align-self-center">
-<h6 class="mb-2">{{ article.title}}</h6>
+<h3 class="mb-2 text-center">{{ article.title}}</h3>
 <a href="{{ path('app_article_detail', { 'slug': article.id} )}}"><p>{{ article.description}}</p></a>
 <span> publiée par: {{article.publishedBy}}</span>
 </div>

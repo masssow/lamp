@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Association Lamp - Page introuvable{% endblock %}
+
+{% block body %}
+<div class="container-fluid agi">
+
+<div class="row d-flex justify-content-center">
+<div class="agi col-md-4 my-5 text-center">
+<h4>404 - Page introuvable</h4>
+
+<img src="{{ asset('images/no-results.png')}}" alt="Page non trouvé" height="200px" class="my-4">
+        <p>Nous sommes désolé, rien par ici!</p>
+            <a href="{{path('app_home')}}" class="btn btn-warning mx-auto my-3">Accueil</a>
+    
+{% endblock %}
