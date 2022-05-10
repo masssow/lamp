@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Asso Lamp - accueil{% endblock %}
+{% block title %}Association Lamp - accueil{% endblock %}
 
 {% block body %}
 <div class="container-fluid"> 
@@ -15,7 +15,7 @@
        
         <div class="mission  col-md-6">
             <a href="{{ path('app_mission')}}"><h2 class="lien-titre" id="mission-titre">Notre mission</h2></a>
-            <a href="{{ path('app_mission')}}">
+            <a href="{{ path('app_mission')}}" class="mission-home">
                 <p class="lien-present" id="mission-text">
                 L'association est au service de la population et l'intégration social notamment des immigrés.
                 Savoir plus...
@@ -31,7 +31,7 @@
                         <article class="actu col-md-6" >
                         <div >
                             <img src="#" alt="">
-                            <h2 class="lien-titre " >Actualités</h2>
+                        <a href="{{ path('app_article')}}"> <h2 class="lien-titre " >Actualités</h2></a> 
                                 {% for article in article %}
                                 <h3>{{ article.title}}
                                 </h3>
@@ -42,12 +42,6 @@
 
                             </p>
                             
-                            {# <div class="visited">
-                            <i class="fa-solid fa-eye">
-                                
-                            </i>
-                            <i class="fa-solid fa-heart"></i>
-                        </div> #}
                         </div>
                     </article>
                     </div> {# home .row  #}
@@ -72,26 +66,27 @@
             </a>  
             </div>
             {% endfor %}
-                <a href="{{ path('app_events')}}" class="btn btn-secondary col-3 my-3 mx-auto">Voir tous les evenements</a>
+                <a href="{{ path('app_events')}}" class="btn btn-secondary my-3 mx-auto col-4 d-grid gap-2">Voir tous les evenements</a>
         </section>
             <div class="soutient-2">
                 <img src="#" alt="" height=""> 
                     <h2 id="agir-titre">Nous soutenir</h2>
-                   <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li"><span class="don">
+                    <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li"><span class="don">
                     Faire un don</span></a>
                             </div>
-       
             
-        <div class="contact slide-left">
+        <div class="contact">
+        <div class="slide-left">
             <h2>Nous contacter</h2>
             <p>21 Avenue de l'Italie<br>
                 75012 Paris<br>
                 France</p>
             <h3>Connectez vous avec nous</h3>
             <div class="reseau-s">
-           <a href="https://www.facebook.com/search/top?q=association%20lamp" target="_blank"> <div class="reseau"><img src="images/facebook.png" alt="" height="40px"></div></a>
+            <a href="https://www.facebook.com/search/top?q=association%20lamp" target="_blank"> <div class="reseau"><img src="images/facebook.png" alt="" height="40px"></div></a>
             <div class="reseau"><img src="images/instagram.png" alt="" height="40px"></div>
             <div class="reseau"><img src="images/twitter.png" alt=""  height="40px"></div>
+        </div>
         </div>
         </div>
     </div>

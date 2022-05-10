@@ -5,11 +5,21 @@
 {% block body %}
 <div class="container-fluid my-5">
 <h4 class="text-center my-4">Nos mission</h4>
-    <div class="row mx-auto">
+<p>L'association Lamp est au service de la population notamment les inmigrés. Elle les assiste et les oriente dans ces domaines d'interventions. <br>
+<br>
+L'équipe composée d'avocats de renomée accompagnent les membre dans toutes leurs démarches juridiques. <strong>Une permanance juridique est ouvert le mercredi et le samedi de 14h à 17h.</strong>
+
+
+</p>
+    <div class="row d-flex justify-content-center">
     {% for mission in mission %}
     <div class="card-mission col-md-4">
-    <h4>{{mission.title}}</h4>
+    <h4 class="accordion-title">{{mission.title}}<img src="{{asset('images/arrow_bottom.svg')}}" alt="voir detail mission" class="fleche-mission ">
+</h4>
     <img src="{{ asset('images/missions/' ~ mission.imageName)}}" alt="{{mission.title}}" class="img-fluid">
+    <div class="accordion-content">
+    <div>{{mission.description}}</div>
+    </div>
     <a href="{{ path('app_mission_detail', { 'slug': mission.id} )}}" class="detail-miss btn btn-sm btn-dark my-3" >Voir detail</a>
         </div>
 

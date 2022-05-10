@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="UTF-8" name="description"content="l'Association lamp assiste et oriente à la population dans ce domaines d'interventions notamment les immigrés">
+        <title>{% block title %}Association Lamp{% endblock %}</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
             <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo-ass.png')}}">
@@ -24,7 +24,7 @@
                 <div class="bloc1-he">
                 <div id="log">
                 <a href="{{ path('app_home')}}">
-                    <img src={{ asset("images/logo-ass.png") }} alt="" height="100px">
+                    <img src={{ asset("images/logo-ass.png") }} alt="Logo de l'association" loading="lazy" height="100px">
                     </a>
                 </div>
                 <div class="ente-t">
@@ -50,7 +50,7 @@
             </nav>
             <div class="bloc2-he">
             
-                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li"><span class="don">
+                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li "><span class="don">
                         Faire un don</span></a> 
                         
                 </div> 
@@ -63,7 +63,7 @@
                 <div class="footer-custom row">
                 <div class="col-md-3 mt-3 text-center">
                 <a href="{{ path('app_home')}}">
-                <img src={{ asset("images/logo-ass.png") }} alt="" height="100px" class="mb-3">
+                <img src={{ asset("images/logo-ass.png") }} alt="Logo de l'association" height="100px" class="mb-3">
                 </a>
                 <strong><p>Association Lamp Paris <br>
                 19 Avenue de l'Italie 75013 Paris<br></p></strong>
@@ -80,6 +80,8 @@
         <li class="foo-li"><a class="lie-li" href="https://www.pole-emploi.fr/accueil/" target="_blank">- Pôle emploi</a></li>
         <li class="foo-li"><a class="lie-li" href="https://www.diplomatie.gouv.fr/fr/le-ministere-et-son-reseau/representations-etrangeres-en-france/" target="_blank">- Représentations étrangères</a></li>
         </ul>
+        <img src="{{asset('images/logo-1901.jpg')}}" alt="Association à but non lucratif" class="logo-1901 img-fluid mx-auto d-block">
+        
     </div>
     <div class="col-md-4 text-center mt-5">
             <ul class="list-foo">
@@ -88,7 +90,13 @@
             <li class="foo-li"><a class="lie-li" href="{{ path('app_contact')}}">- Contact</a></li>
             <li class="foo-li"><a class="lie-li" href="{{ path('app_c_g_u')}}">- CGU (Conditions Générales d'Utilisation)</a></li>
             </ul>
+            <div class="reseau-foot">
+            <a href="https://www.facebook.com/search/top?q=association%20lamp" target="_blank"> <div class="reseau"><img src="images/facebook.png" alt="" height="40px"></div></a>
+            <div class="reseau"><img src="images/instagram.png" alt="" height="40px"></div>
+            <div class="reseau"><img src="images/twitter.png" alt=""  height="40px"></div>
         </div>
+        </div>
+        
     <p class="t-foo text-center"><img src="{{asset('images/droits-dauteur.png')}}" alt="" height="12px"> 2022 <strong>Association Lamp</strong>. Tout les droits réservés</p> 
 </div>  {# .footer-custom .row #}
 </footer>
@@ -99,6 +107,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script src="{{ asset('js/menu.js')}}"></script>
 <script src="{{ asset('js/slide.js')}}"></script>
+<script src="{{ asset('js/accordion.js')}}"></script>
+
     {% block javascripts %}{% endblock %}
 
 </body>

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Asso Lamp - Evenements{% endblock %}
+{% block title %}Association Lamp - {{ event.title}}{% endblock %}
 
 
 {% block body %}
@@ -26,5 +26,5 @@
 </div>
 </div>
 
-<a href="{{ path('app_events')}}"><img src="{{ asset('images/back.png')}}" alt="retour à la page d'accueil" class=" arrow-return img-fluid mx-auto d-block my-4" height="30px"></a>
+<a href="{{ path('app_events')}}" class="btn btn-warning my-3">Autres Evenements</a>
 {% endblock %}

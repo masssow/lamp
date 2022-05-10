@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Asso Lamp - actualités{% endblock %}
+{% block title %}Association Lamp - actualités{% endblock %}
 
 {% block body %}
 
@@ -13,7 +13,7 @@
 </div>
 <div class="col-md-7 align-self-center">
 <h3 class="mb-2 text-center">{{ article.title}}</h3>
-<a href="{{ path('app_article_detail', { 'slug': article.id} )}}"><p>{{ article.description}}</p></a>
+<a href="{{ path('app_article_detail', { 'slug': article.id} )}}" class="art-text"><p>{{ article.description}}</p></a>
 <span> publiée par: {{article.publishedBy}}</span>
 </div>
 

@@ -11,7 +11,7 @@
 
 main{
     position: relative;
-     min-height: 90vh;
+    min-height: 90vh;
     padding-top: 0;
 }
 a{
@@ -181,6 +181,7 @@ header{
     transition: 0.6s;
 }.don-li{
     color:#011F26;
+    transform: translateY(-50%);
 }.ente-t{
     text-transform: uppercase;
     color: white;
@@ -209,7 +210,10 @@ header{
     min-height: 300px;
     background: #d3c892;
     color: #011F26;
-}#mission-titre, #mission-text{
+}.mission-home:hover{
+    color: #011F26;
+}
+#mission-titre, #mission-text{
     color: white;
 }.card-mission{
     background-color:  #BFB78F;;
@@ -218,6 +222,34 @@ header{
     margin: 20px;
     max-width: 350px;
     height: auto;
+}.entete-mission{
+    display: flex;
+    justify-content: space-around;
+}
+.fleche-mission{
+    width: 30px;
+    margin-left: 10px;
+}
+.accordion-content{
+    font-size: 1.3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow: hidden;
+    height: auto;
+    transition: all 1s;
+}.accordion-title{
+    // background-color: darkgoldenrod;
+    color: black;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+    margin-top: 20px;
+    font-family: 'Laila', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}.accordion-title:hover{
+   
+}
+#img-arrow{
+    width: 25px;
 }
 .soutient{
     display: flex;
@@ -237,6 +269,8 @@ header{
     align-items: center;
     justify-content: center;
     min-height: 300px;  
+}.art-text{
+    color: #011F26;
 }
 // ########## SLIDE-IN ######
 .slide-left{
@@ -271,6 +305,7 @@ header{
     font-size: 1.5em;
     text-align: center;
     text-transform:uppercase;
+    margin-bottom: 20px;
 }.contact{
     text-align: center;
     display: flex;
@@ -318,7 +353,12 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}.arrow-return{
+}.reseau-foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.arrow-return{
     max-width: 30px;
     height: auto;
 }
@@ -374,6 +414,11 @@ footer{
             margin-top: 30px;
         }.ente-t{
             transform: translate(-50px,30px);
+        }.header-nous{
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index:-10;
         }.img-list-admin{
             max-width: 150px;
             height: auto;
@@ -385,7 +430,7 @@ footer{
             list-style-type: none;
             left: 0 ;
             right: 0 auto;
-            transform: translateY(20%);
+            transform: translateY(10%);
         } nav, .menu-li{
             color: white;
             text-decoration: none;
@@ -397,6 +442,11 @@ footer{
             transition: 0.4s;
         }.menu-lien:hover{
             color: #011F26;
+        }
+        .don-li{
+            color:#011F26;
+            bottom: 20px;
+            transform: translateY(-50%);
         }video{
             // max-height: 200px; 
              height: auto;
