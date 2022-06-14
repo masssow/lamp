@@ -8,6 +8,12 @@
     --active: #BFB78F;
     --dark: #3D5A73;
 }
+*  {
+    font-size: 1.3rem;
+    color: #011F26; 
+
+    
+}
 
 main{
     position: relative;
@@ -16,6 +22,9 @@ main{
 }
 a{
     text-decoration: none;
+}
+h1{
+    color: whitesmoke;
 }
 .img-list-admin{
     max-width: 150px;
@@ -198,9 +207,11 @@ header{
     align-items: center;
     justify-content: center;
     padding: 20px 20px 20px 20px;
-    color: #011F26;
     background-image: linear-gradient(#cdc5c558,#cdc5c5db) ,url(../images/mikael-blomkvist.jpg);
     min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }.mission{
     display: flex;
     flex-direction: column;
@@ -208,15 +219,16 @@ header{
     justify-content: center;
     padding: 20px 20px 20px 20px;
     min-height: 300px;
-    background: #d3c892;
-    color: #011F26;
+    background-image: linear-gradient(#bfb78f7c,#bfb78fa9) ,url(../images/qui_sommes.jpg);
+    background-size: cover;
+    background-position: center;
 }.mission-home:hover{
     color: #011F26;
 }
 #mission-titre, #mission-text{
-    color: white;
+    font-weight: 600;
 }.card-mission{
-    background-color:  #BFB78F;;
+    background-color:  #BFB78F;
     // padding: 5px;
     font-family: 'Exo 2', sans-serif;
     margin: 20px;
@@ -260,6 +272,7 @@ header{
     padding: 20px 20px 20px 20px;
     min-height: 300px;  
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .slogan-soutien{
     color: white;
@@ -449,23 +462,14 @@ footer{
             transform: translateY(-50%);
         }video{
             // max-height: 200px; 
-             height: auto;
+            height: auto;
             width: 100%;
-             position: absolute;
+            position: absolute;
             z-index: -99;
             background-size: cover;
             display: block;
             opacity: 0.6;
             top: 500px;
-        }.mission{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 20px 20px 20px;
-            min-height: 300px;
-            background: #d3c892;
-            color: #011F26;
         }
 }
 
