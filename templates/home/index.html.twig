@@ -9,26 +9,26 @@
         </video>    #}
     <section>
             <div class="row home">
-                <div class="col-lg-6 my-4 nous">
-                    <a href="{{ path('app_qui_sommes')}}"><h2 class="lien-titre">qui sommes nous?</h2>
+                <div class="col-lg-6 my-4 nous landing-head">
+                    <a href="{{ path('app_qui_sommes')}}" class="lien-landing"><h2 class="lien-titre">qui sommes nous?</h2>
                     <p class="lien-present">L'association Lamp Paris est au service de plus défavorises... </p></a>
                 </div>
-                <div class=" col-lg-6 my-4 mission ">
-                    <a href="{{ path('app_mission')}}"><h2 class="lien-titre" id="mission-titre">Notre mission</h2></a>
+                <div class=" col-lg-6 my-4 mission landing-head">
+                    <a href="{{ path('app_mission')}}" class="lien-landing"><h2 class="lien-titre" id="mission-titre">Notre mission</h2></a>
                     <a href="{{ path('app_mission')}}" class="mission-home">
                     <p class="lien-present" id="mission-text">
                     L'association est au service de la population et l'intégration social notamment des immigrés.
-                    Savoir plus...
+                   <strong>Savoir plus...</strong> 
                     </p></a>
                 </div>
-                <div class="col-lg-6 my-4 soutient">
-                    <a href="{{ path('app_agir')}}" class="lien-titre">
-                    <h2 id="agir-titre">Agir avec nous pour le développement humain</h2>
+                <div class="col-lg-6 my-4 soutient landing-head">
+                    <a href="{{ path('app_agir')}}"  class="lien-landing">
+                    <h2 class="lien-titre-agir">Agir avec nous pour le développement humain</h2>
                     </a>
                 </div>
-                <div class="col-lg-6 my-4 actu">
+                <div class="col-lg-6 my-4 actu landing-head">
                     <img src="#" alt="">
-                    <a href="{{ path('app_article')}}"> <h2 class="lien-titre " >Actualités</h2></a> 
+                    <a href="{{ path('app_article')}}" class="lien-landing"> <h2 class="lien-titre " >Actualités</h2></a> 
                     {% for article in article %}
                     <h3>{{ article.title}}</h3>
                     <p>{{ article.description}}
@@ -60,7 +60,7 @@
                     </a>  
         </div>
                 {% endfor %}
-                    <a href="{{ path('app_events')}}" class="btn btn-secondary my-3 mx-auto col-4 d-grid gap-2">Voir tous les evenements</a>
+                    <a href="{{ path('app_events')}}" class="btn btn-secondary my-3 mx-auto col-4">Voir tous les evenements</a>
         </div>
     </section>
     <div class="soutient-2">

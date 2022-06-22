@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Kanit&display=swap');
 
-:root{
-    --primary: #F2F2F2;
-    --secondary: #025E73;
-    --text: #011F26;
-    --disable: #A5A692;
-    --active: #BFB78F;
-    --dark: #3D5A73;
-}
+
+    $primary: #F2F2F2;
+    $secondary: #025E73;
+    $text: #011F26;
+    $disable: #A5A692;
+    $active: #BFB78F;
+    $dark: #3D5A73;
+    $texLight:#f5f5f5;
+
 *  {
     color: #011F26; 
 
@@ -23,7 +24,8 @@ a{
     text-decoration: none;
 }
 h1{
-    color: whitesmoke;
+    color: $texLight;
+    
 }
 .img-list-admin{
     max-width: 150px;
@@ -33,7 +35,7 @@ h1{
 
 /* show responsive menu and position at the right of the screen */
 #menu {
- display: none; 
+display: none; 
 margin: 0;
 right: 0;
 top: 0;
@@ -61,7 +63,7 @@ position: absolute;
 height: 4px;
 width: 100%;
 margin-bottom: 5px;
-background: #ededed;
+background: $texLight;
 border-radius: 3px;
 z-index: 100;
 opacity: 1;
@@ -90,7 +92,7 @@ transform-origin: left bottom;
 }
 /* change color when opening the menu */
 #hamburger_icon.open span {
-background: rgb(245, 245, 245);
+background: $texLight;
 }
 /* the first span rotates 45° \ */
 #hamburger_icon.open span:nth-child(1) {
@@ -137,9 +139,7 @@ transform: rotate(-45deg);
     color:#09404d ;
 }
 header{
-    // position: relative;  
     background-color: #09404d ;
-    /* display: block; */
     width: 100%;
 }video{
     // min-height: 100%; 
@@ -152,7 +152,6 @@ header{
     opacity: 0.6;
     left: 0;
     top:15%;
-
 }#log{
     display: block;
     transform: translate(10px, 10px);
@@ -194,30 +193,38 @@ header{
     text-transform: uppercase;
     color: white;
     transform: translate(10px, 50px);
-}.lien-titre{
+}
+.lien-titre{
     text-transform: uppercase;
-    color: var(--text);
+    color:$texLight;
+    font-size: 4rem;  
+    text-align: center;
+    background-color: #011f268e;
+    padding: 10px;
+    border-radius: 10px;
+}.lien-titre-agir{
+    font-size: 3rem;
+    color: $texLight;
+    text-align: center;
 }
 .lien-present{
-    color: #011F26;
-}.nous{
+    font-size: 2rem;
+    color:$text
+}
+.landing-head{
     display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px 20px 20px 20px;
+    min-height: 500px;
+
+}.nous{
     background-image: linear-gradient(#cdc5c558,#cdc5c5db) ,url(../images/mikael-blomkvist.jpg);
-    min-height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }.mission{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 20px 20px 20px;
-    min-height: 300px;
     background-image: linear-gradient(#bfb78f7c,#bfb78fa9) ,url(../images/qui_sommes.jpg);
     background-size: cover;
     background-position: center;
@@ -263,10 +270,6 @@ header{
     width: 25px;
 }
 .soutient{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-image: linear-gradient(#d357579b,#e439399b) ,url(../images/volontaires.jpg);
     padding: 20px 20px 20px 20px;
     min-height: 300px;  
@@ -276,11 +279,7 @@ header{
 .slogan-soutien{
     color: white;
 }.actu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;  
+
 }.art-text{
     color: #011F26;
 }
@@ -308,7 +307,6 @@ header{
     padding-top: 20px;
     padding: 20px 20px 20px 20px;
     min-height: 200px;  
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -330,6 +328,7 @@ header{
     background-color: var(--dark);
     width: 100%;
     color: white;
+    background-color: $secondary;
 }
 // Date evenements
 #event-titre{
@@ -436,6 +435,29 @@ footer{
         }.img-list-admin{
             max-width: 150px;
             height: auto;
+        }.landing-head{
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px 20px 20px;
+            min-height: 400px;
+        }.lien-titre{
+            text-transform: uppercase;
+            color:$texLight;
+            font-size: 2.5rem;  
+            text-align: center;
+            background-color: #011f268e;
+            padding: 10px;
+            border-radius: 10px;
+        }.lien-titre-agir{
+            font-size: 3rem;
+            color: $texLight;
+            text-align: center;
+        }
+        .lien-present{
+            font-size: 2rem;
+            color:$text
         }
         /*-----------------------NavBar----------------------- */
         nav, .b-menu {
@@ -471,6 +493,19 @@ footer{
             display: block;
             opacity: 0.6;
             top: 500px;
+        }.soutient-2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(#d357579b,#e439399b) ,url(../images/pexels-bruna-saito-1805843.jpg);
+            padding-top: 20px;
+            padding: 20px 20px 20px 20px;
+            min-height: 200px;  
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
         }
 }
 
