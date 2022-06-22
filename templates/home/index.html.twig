@@ -8,13 +8,12 @@
             <source src="images/production.mp4" type="video/mp4">
         </video>    #}
     <section>
-        <div class="home">
-            <div class="row">
-                <div class="col-md-6 my-4 nous">
+            <div class="row home">
+                <div class="col-lg-6 my-4 nous">
                     <a href="{{ path('app_qui_sommes')}}"><h2 class="lien-titre">qui sommes nous?</h2>
                     <p class="lien-present">L'association Lamp Paris est au service de plus défavorises... </p></a>
                 </div>
-                <div class="mission my-4 col-md-6">
+                <div class=" col-lg-6 my-4 mission ">
                     <a href="{{ path('app_mission')}}"><h2 class="lien-titre" id="mission-titre">Notre mission</h2></a>
                     <a href="{{ path('app_mission')}}" class="mission-home">
                     <p class="lien-present" id="mission-text">
@@ -22,12 +21,12 @@
                     Savoir plus...
                     </p></a>
                 </div>
-                <div class="col-md-6 my-4 soutient">
+                <div class="col-lg-6 my-4 soutient">
                     <a href="{{ path('app_agir')}}" class="lien-titre">
                     <h2 id="agir-titre">Agir avec nous pour le développement humain</h2>
                     </a>
                 </div>
-                <div class="col-md-6 my-4 actu">
+                <div class="col-lg-6 my-4 actu">
                     <img src="#" alt="">
                     <a href="{{ path('app_article')}}"> <h2 class="lien-titre " >Actualités</h2></a> 
                     {% for article in article %}
@@ -38,12 +37,11 @@
                     </p>    
                 </div>
             </div>{# .row #}
-        </div>{# home #}
             
     </section>
     <section>
         <div class="row mt-5">
-            <h2 id="event-titre ">Evenements</h2>
+            <h2 id="event-titre">Evenements</h2>
                 {% for event in event %}
                 <div class="col-md-6 col-lg-4 event">
                     <h3>{{ event.title}}</h3> 

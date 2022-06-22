@@ -9,7 +9,6 @@
     --dark: #3D5A73;
 }
 *  {
-    font-size: 1.3rem;
     color: #011F26; 
 
     
@@ -336,6 +335,7 @@ header{
 #event-titre{
     text-transform: uppercase;
     color: #011F26;
+    text-align: center;
 }
 .date{
     display: flex;
