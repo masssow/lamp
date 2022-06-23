@@ -22,7 +22,7 @@
                 <td>{{ mission.id }}</td>
                 <td>{{ mission.title }}</td>
                 {# <td>{{ mission.description }}</td> #}
-                <td><img src="{{ asset('images/missions/' ~ mission.imageName)}}" alt="" class="img-list-admin"></td>
+                <td><img src="{{ asset('images/missions/' ~ mission.imageName)}}" alt="" class="img-list-admin" height="150px"></td>
                 {# <td>{{ mission.imageSize }}</td> #}
                 <td>{{ mission.updatedAt ? mission.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ mission.isBest ? 'Yes' : 'No' }}</td>

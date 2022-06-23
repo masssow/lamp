@@ -31,7 +31,7 @@
                     <a href="{{ path('app_article')}}" class="lien-landing"> <h2 class="lien-titre " >Actualités</h2></a> 
                     {% for article in article %}
                     <h3>{{ article.title}}</h3>
-                    <p>{{ article.description}}
+                    <p class="para-present">{{ article.description}}
                     {% endfor %}
                     <a href="{{ path('app_article')}}">Savoir plus...</a>
                     </p>    
@@ -60,7 +60,7 @@
                     </a>  
         </div>
                 {% endfor %}
-                    <a href="{{ path('app_events')}}" class="btn btn-secondary my-3 mx-auto col-4">Voir tous les evenements</a>
+                    <a href="{{ path('app_events')}}" class="btn btn-secondary mb-5 mx-auto col-4">Voir tous les evenements</a>
         </div>
     </section>
     <div class="soutient-2">

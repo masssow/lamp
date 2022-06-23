@@ -9,19 +9,76 @@
     $dark: #3D5A73;
     $texLight:#f5f5f5;
 
-*  {
-    color: #011F26; 
 
-    
-}
-
-main{
+body{
     position: relative;
     min-height: 90vh;
     padding-top: 0;
 }
 a{
     text-decoration: none;
+}.header-custom{
+    // margin-top: 100px;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 20px;
+    position: static;
+    min-height: 300px;
+    z-index: -100;
+}.header-custom, .hc-nous{
+    background: url(../images/qui_sommes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:inherit;
+    background-position: center;
+}
+.header-custom, .hc-agir{
+    background: url(../images/qui_sommes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:inherit;
+    background-position: center;
+}
+.header-custom, .hc-mission{
+    background: url(../images/qui_sommes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:inherit;
+    background-position: center;
+}.header-custom,.hc-evenements{ 
+    background: url(../images/qui_sommes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:inherit;
+    background-position: center;
+}
+.header-custom, .hc-actu{
+    background: url(../images/qui_sommes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:inherit;
+    background-position: center;
+}
+.header-custom, .hc-contact{
+    background: url(../images/qui_sommes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:inherit;
+    background-position: center;
+}
+.titre-prin-pag{
+    font-size: 3rem;
+    margin-top: 100px;
+    margin-bottom:10px;
+    text-align: center;
+}.sous-titre-prin{
+    font-size: 2rem;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.para-present{
+    font-size: 2rem;
+    text-align: center;
 }
 h1{
     color: $texLight;
@@ -44,72 +101,72 @@ z-index: 99;
 transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 /* ******************** HAMBURGER ICON ******************** */
-/* define size and position of the hamburger link */
-#hamburger_icon {
-display: block;
-position: relative;
-margin: 16px;
-width: 33px;
-height: 28px;
-z-index: 100;
-user-select: none;
-cursor: pointer;
-right: 0;
-}
-/* define the style (size, color, position, animation, ...) of the 3 spans */
-#hamburger_icon span {
-display: block;
-position: absolute;
-height: 4px;
-width: 100%;
-margin-bottom: 5px;
-background: $texLight;
-border-radius: 3px;
-z-index: 100;
-opacity: 1;
-left: 0;
-transform: rotate(0deg);
-transition: 0.25s ease-in-out;
-}
-/* set the 3 spans position to look like a hamburger */
-#hamburger_icon span:nth-child(1) {
-top: 0px;
-transform-origin: left top;
-}
-#hamburger_icon span:nth-child(2) {
-top: 12px;
--webkit-transform-origin: left center;
--moz-transform-origin: left center;
--o-transform-origin: left center;
-transform-origin: left center;
-}
-#hamburger_icon span:nth-child(3) {
-top: 24px;
--webkit-transform-origin: left bottom;
--moz-transform-origin: left bottom;
--o-transform-origin: left bottom;
-transform-origin: left bottom;
-}
-/* change color when opening the menu */
-#hamburger_icon.open span {
-background: $texLight;
-}
-/* the first span rotates 45° \ */
-#hamburger_icon.open span:nth-child(1) {
-width: 110%;
-
-transform: rotate(45deg);
-}
-/* the second span disappears */
-#hamburger_icon.open span:nth-child(2) {
-width: 0%;
-opacity: 0;
-}
-/* the last span rotates -45° / */
-#hamburger_icon.open span:nth-child(3) {
-width    : 110%;
-transform: rotate(-45deg);
-}
+    /* define size and position of the hamburger link */
+    #hamburger_icon {
+        display: block;
+        position: relative;
+        margin-top: 56px;
+        margin-right: 50px;
+        width: 63px;
+        height: 28px;
+        z-index: 100;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+    }
+    /* define the style (size, color, position, animation, ...) of the 3 spans */
+    #hamburger_icon span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        margin-bottom: 5px;
+        background: #ededed;
+        border-radius: 3px;
+        z-index: 100;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+    }
+    /* set the 3 spans position to look like a hamburger */
+    #hamburger_icon span:nth-child(1) {
+        top: 0px;
+        transform-origin: left top;
+    }
+    #hamburger_icon span:nth-child(2) {
+        top: 12px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+    #hamburger_icon span:nth-child(3) {
+        top: 24px;
+        -webkit-transform-origin: left bottom;
+        -moz-transform-origin: left bottom;
+        -o-transform-origin: left bottom;
+        transform-origin: left bottom;
+    }
+    /* change color when opening the menu */
+    #hamburger_icon.open span {
+        background: #f5F5F5;
+    }
+    /* the first span rotates 45° \ */
+    #hamburger_icon.open span:nth-child(1) {
+        width: 110%;
+        transform: rotate(45deg);
+    }
+    /* the second span disappears */
+    #hamburger_icon.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+    /* the last span rotates -45° / */
+    #hamburger_icon.open span:nth-child(3) {
+        width    : 110%;
+        transform: rotate(-45deg);
+    }
 /* ------Fin Burger Menu */
 .full-screen-menu,.menu-lien{
     background-color: #282921ea;
@@ -118,6 +175,7 @@ transform: rotate(-45deg);
     height: 100%;
     transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     color: white;
+    font-size: 3rem;
     
 }.full-screen-menu,.b-menu{
     position: absolute;
@@ -127,13 +185,13 @@ transform: rotate(-45deg);
 
 }.full-screen-menu,.menu-li,.lien-li{
     right: 0 ;
-    font-size: large;
+    font-size: 3rem;
     letter-spacing: 4px;
-    margin-top: 15px;
+    margin-top: 25px;
     font-weight:600;
-    text-transform: uppercase
-    ;
+    text-transform: uppercase;
     color: white;
+    padding: 15px;
 }
 .full-screen-menu,.menu-lien:hover{
     color:#09404d ;
@@ -170,6 +228,7 @@ header{
 }.bloc1-he{
     display: flex; 
     justify-content: space-between;
+    padding: 20px;
 }.don{
     background-color:#F2A71B;
     padding: 5px 60px;
@@ -188,11 +247,15 @@ header{
     transition: 0.6s;
 }.don-li{
     color:#011F26;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
+    font-size: 1rem;
 }.ente-t{
     text-transform: uppercase;
     color: white;
-    transform: translate(10px, 50px);
+    transform: translate(60px, 70px);
+}
+.titre-asso{
+    font-size: 3rem;
 }
 .lien-titre{
     text-transform: uppercase;
@@ -224,7 +287,10 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}.mission{
+}.imag-nous{
+    min-width: 300px;
+}
+.mission{
     background-image: linear-gradient(#bfb78f7c,#bfb78fa9) ,url(../images/qui_sommes.jpg);
     background-size: cover;
     background-position: center;
@@ -234,19 +300,27 @@ header{
 #mission-titre, #mission-text{
     font-weight: 600;
 }.card-mission{
-    background-color:  #BFB78F;
+    background-color: $disable;
     // padding: 5px;
     font-family: 'Exo 2', sans-serif;
     margin: 20px;
-    max-width: 350px;
+    min-width: 350px;
     height: auto;
+    padding: 40px;
+    border-radius:20px;
+    box-shadow: 5px 5px rgb(63, 62, 62);
 }.entete-mission{
     display: flex;
     justify-content: space-around;
-}
-.fleche-mission{
+}.fleche-mission{
     width: 30px;
     margin-left: 10px;
+}.titre-mission{
+    font-size: 3rem;
+    text-align: center;
+}
+.detail-miss{
+    font-size: 1.5rem;
 }
 .accordion-content{
     font-size: 1.3rem;
@@ -257,14 +331,13 @@ header{
 }.accordion-title{
     // background-color: darkgoldenrod;
     color: black;
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     padding: 5px 10px;
     margin-top: 20px;
     font-family: 'Laila', sans-serif;
     font-weight: 400;
     cursor: pointer;
-}.accordion-title:hover{
-   
+    text-align: center;
 }
 #img-arrow{
     width: 25px;
@@ -329,31 +402,41 @@ header{
     width: 100%;
     color: white;
     background-color: $secondary;
+    
+}.event{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 // Date evenements
 #event-titre{
     text-transform: uppercase;
     color: #011F26;
     text-align: center;
+}.titre-event{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+
 }
 .date{
     display: flex;
-    /* align-items: center; */
-    justify-content: start;
-    /* align-items: flex-start; */
+    align-items: center; 
+    justify-content: center;
 }.dateRight{
     display: flex;
     align-items: center;
 }#mois{  
-    font-family: 'Exo 2', sans-serif;  
+    font-family: 'Exo 2', sans-serif; 
+    font-size: 1.5rem; 
 }#anee{
     font-size: 1em;
     display: block;
     align-self: flex-end;
     z-index: 5;
     font-family: 'Exo 2', sans-serif;
+    font-size: 1.5rem;
 }#number{
-    font-size: 2.5em;
+    font-size: 3.5em;
     text-align: start;
     font-family: 'Exo 2', sans-serif;
     font-weight: 400
@@ -379,6 +462,7 @@ footer{
     width: 100%;
     bottom: 0;
     padding: 20px 20px;  
+    position: static;
 }.footer-custom{
     // text-align: center;
     background-color: #a2d6e2;
@@ -388,11 +472,13 @@ footer{
     color: black;
     // text-transform: uppercase;
     font-weight: 500;
+    font-size: 1.5rem;
 }
 
 /* --------ADMIN---------- */
 .img-list-admin{
-    max-width: 150px;
+    max-width: 100px;
+    height: auto;
 }.list-unstyled, .li-list-admin{
     text-decoration: none;
 }
@@ -432,6 +518,15 @@ footer{
             height: auto;
             position: relative;
             z-index:-10;
+        }.header-custom{
+            // margin-top: 100px;
+            width: 100%;
+            padding: 30px;
+            margin-bottom: 20px;
+            position: static;
+            min-height: 500px;
+            z-index: -100;
+            background-position: center;
         }.img-list-admin{
             max-width: 150px;
             height: auto;
@@ -476,8 +571,12 @@ footer{
             background-color: #c2cd7700;
             padding-left: 3px;
             transition: 0.4s;
+            font-size: 1.5rem;
         }.menu-lien:hover{
             color: #011F26;
+        }.block-contact{
+            font-size: 1.5rem;
+            text-align: center;
         }
         .don-li{
             color:#011F26;
