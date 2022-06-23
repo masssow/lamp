@@ -3,9 +3,10 @@
 {% block title %}Association Lamp - actualités{% endblock %}
 
 {% block body %}
-
-<div class="container">
-<h3 class="text-center mt-5">Dernières actualités</h3>
+<div class="container-fluid">
+<div class="header-custom hc-actu">
+</div>
+<h2 class="titre-prin-pag">Dernières actualités</h2>
 
 {% for article in article %}
 <div class="row my-5"><div class="col-md-5">
@@ -13,7 +14,7 @@
 </div>
 <div class="col-md-7 align-self-center">
 <h3 class="mb-2 text-center">{{ article.title}}</h3>
-<a href="{{ path('app_article_detail', { 'slug': article.id} )}}" class="art-text"><p>{{ article.description}}</p></a>
+<a href="{{ path('app_article_detail', { 'slug': article.id} )}}" class="art-text"><p class="para-present">{{ article.description}}</p></a>
 <span> publiée par: {{article.publishedBy}}</span>
 </div>
 

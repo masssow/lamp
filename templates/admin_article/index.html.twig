@@ -26,7 +26,7 @@
                 <td>{{ article.publishedBy }}</td>
                 <td>{{ article.isBest ? 'Yes' : 'No' }}</td>
                 {# <td>{{ article.datetime ? article.datetime|date('d-m-Y H:i:s') : '' }}</td> #}
-                <td><img src="{{ asset('images/articles/' ~ article.imageName)}}" alt="" class="img-list-admin img-fluid"></td>
+                <td><img src="{{ asset('images/articles/' ~ article.imageName)}}" alt="" class="img-list-admin" height="150px"></td>
                 {# <td>{{ article.description }}</td> #}
                 <td>
                     <a href="{{ path('app_admin_article_show', {'id': article.id}) }}"><i class="fa-solid fa-eye"></i></a>

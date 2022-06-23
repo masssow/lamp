@@ -24,11 +24,11 @@
                 <div class="bloc1-he">
                 <div id="log">
                 <a href="{{ path('app_home')}}">
-                    <img src={{ asset("images/logo-ass.png") }} alt="Logo de l'association" loading="lazy" height="100px">
+                    <img src={{ asset("images/logo-ass.png") }} alt="Logo de l'association" loading="lazy" height="200px">
                     </a>
                 </div>
                 <div class="ente-t">
-                    <h1>Association lamp</h1> 
+                    <h1 class="titre-asso">Association lamp</h1> 
                 </div>   
                 <a id="hamburger_icon">
                     <span></span>
@@ -41,16 +41,18 @@
             <nav id="menu">
                 <ul class="b-menu">
                 <li class="menu-li"><a class="menu-lien" href="{{ path('app_home')}}">accueil</a></li>
-                <li class="menu-li"><a class="menu-lien" href="{{ path('app_qui_sommes')}}">qui sommes nous?</a></li>
+                <li class="menu-li"><a class="menu-lien" href="{{ path('app_qui_sommes')}}">a propos</a></li>
                 <li class="menu-li"><a class="menu-lien" href="{{ path('app_agir')}}" >agir avec nous</a></li>
                 <li class="menu-li"><a class="menu-lien" href="{{ path('app_events')}}"> évenements</a></li>
                 <li class="menu-li"><a class="menu-lien" href="{{ path('app_article')}}">actualités</a></li>
                 <li class="menu-li"><a class="menu-lien" href="{{ path('app_contact')}}">contact</a></li>
+                <li class="menu-li"><a class="menu-lien" href="{{ path('app_mission')}}">Missions</a></li>
+
                 </ul>
             </nav>
             <div class="bloc2-he">
             
-                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li "><span class="don">
+                <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li"><span class="don">
                         Faire un don</span></a> 
                         
                 </div> 
@@ -65,14 +67,14 @@
                 <a href="{{ path('app_home')}}">
                 <img src={{ asset("images/logo-ass.png") }} alt="Logo de l'association" height="100px" class="mb-3">
                 </a>
-                <strong><p>Association Lamp Paris <br>
+                <strong><p class="foo-li">Association Lamp Paris <br>
                 19 Avenue de l'Italie 75013 Paris<br></p></strong>
                 </p><br> 
-                    <p class="">Lamp Paris est une association de loi 1901 (SIRET n°000 000 000 00000 et RNA n°W00000000). Chaque don ouvre droit à une réduction d’impôts égale à 66% du montant du don, dans la limite de 20% de votre revenu imposable.
+                    <p class="foo-li">Lamp Paris est une association de loi 1901 (SIRET n°000 000 000 00000 et RNA n°W00000000). Chaque don ouvre droit à une réduction d’impôts égale à 66% du montant du don, dans la limite de 20% de votre revenu imposable.
                     </p><br>
                 </div>
             <div class="liens col-md-4 mt-5 text-center">
-                <h6 class="">Liens utiles</h6>
+                <h6 class="foo-li">Liens utiles:</h6>
             <ul class="list-foo ">
         <li class="foo-li"><a class="lie-li" href="https://ameli.fr/" target="_blank">- Assurance maladie</a></li>
         <li class="foo-li" ><a class="lie-li" href="https://www.caf.fr/" target="_blank">- Caf</a></li>
