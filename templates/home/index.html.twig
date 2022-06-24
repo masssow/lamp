@@ -55,12 +55,17 @@
                             </div>
                     </div>
                 </div> 
+
+                
                     <a href="{{ path('app_event_detail', {'slug': event.id} )}}">
-                        <span class="btn btn-dark mb-5 d-grid gap-2 col-4 mx-auto ">Savoir plus</span>
+                        <span class="btn btn-dark mb-5 d-grid gap-2 mx-auto ">Savoir plus</span>
                     </a>  
         </div>
                 {% endfor %}
-                    <a href="{{ path('app_events')}}" class="btn btn-secondary mb-5 mx-auto col-4">Voir tous les evenements</a>
+                <div class="d-grid gap-2 d-md-block mx-auto mb-5">
+
+                    <a href="{{ path('app_events')}}" class="btn btn-secondary col-4">Voir tous les evenements</a>
+                </div>
         </div>
     </section>
     <div class="soutient-2">
