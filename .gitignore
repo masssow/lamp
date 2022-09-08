@@ -8,6 +8,8 @@
 /var/
 /vendor/
 /images/
+/.htaccess
+/public/.htaccess
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
