@@ -15,6 +15,13 @@ body{
     min-height: 90vh;
     padding-top: 0;
 }
+h2{
+    text-transform: uppercase;
+    font-size: 2.5;
+}
+h6{
+    text-transform: uppercase;
+}
 a{
     text-decoration: none;
 }.header-custom{
@@ -67,18 +74,21 @@ a{
     background-position: center;
 }
 .titre-prin-pag{
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 100px;
     margin-bottom:10px;
     text-align: center;
 }.sous-titre-prin{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 80px;
     margin-bottom: 20px;
 }
 .para-present{
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
+}
+body > main > div > div > section:nth-child(1) > div > div.col-lg-6.my-4.soutient.landing-head > a{
+    font-size: 1.5rem;
 }
 h1{
     color: $texLight;
@@ -297,7 +307,7 @@ header{
 }.mission-home:hover{
     color: #011F26;
 }
-#mission-titre, #mission-text{
+#mission-titre, #mission-text,.lien-landing, .lien-present,.para-present{
     font-weight: 600;
 }.card-mission{
     background-color: $disable;
@@ -343,7 +353,7 @@ header{
     width: 25px;
 }
 .soutient{
-    background-image: linear-gradient(#d357579b,#e439399b) ,url(../images/volontaires.jpg);
+    background-image: linear-gradient(#d357579b,#e439399b) ,url(../images/pexels-julia.jpg);
     padding: 20px 20px 20px 20px;
     min-height: 300px;  
     background-repeat: no-repeat;
@@ -413,10 +423,13 @@ header{
     text-transform: uppercase;
     color: #011F26;
     text-align: center;
+    font-size: 1.5;
 }.titre-event{
     font-size: 2.5rem;
     text-transform: uppercase;
-
+}
+h3{
+    font-size: 2rem;
 }
 .date{
     display: flex;
@@ -427,16 +440,15 @@ header{
     align-items: center;
 }#mois{  
     font-family: 'Exo 2', sans-serif; 
-    font-size: 1.5rem; 
+    font-size: 1rem; 
 }#anee{
     font-size: 1em;
     display: block;
     align-self: flex-end;
     z-index: 5;
     font-family: 'Exo 2', sans-serif;
-    font-size: 1.5rem;
 }#number{
-    font-size: 3.5em;
+    font-size: 2rem;
     text-align: start;
     font-family: 'Exo 2', sans-serif;
     font-weight: 400
@@ -470,9 +482,12 @@ footer{
     list-style: none;
 }.foo-li,.lie-li{
     color: black;
-    // text-transform: uppercase;
     font-weight: 500;
     font-size: 1.5rem;
+    text-align: start;
+}.logo-1901{
+    max-width: 200px;
+    height: auto;
 }
 
 /* --------ADMIN---------- */
