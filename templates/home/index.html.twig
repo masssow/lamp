@@ -43,8 +43,8 @@
         <div class="row mt-5">
             <h2 id="event-titre">Evenements</h2>
                 {% for event in event %}
-                <div class="col-md-6 col-lg-4 event">
-                    <h3>{{ event.title}}</h3> 
+                <div class="col-lg-4 event">
+                    <h3 class="titre-event">{{ event.title}}</h3> 
                     <img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid image-event">
                     <div class="date ">
                             <div class="dateRight">

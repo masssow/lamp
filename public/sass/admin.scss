@@ -36,7 +36,6 @@ a{
     background: url(../images/qui_sommes.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:inherit;
     background-position: inherit;
 }
 body > main > div > div > div.header-custom.hc-agir{
@@ -417,7 +416,11 @@ header{
     text-align: center;
     background-color:$primary;
     padding: 5px;
-}.image-event{
+}
+.titre-event{
+    margin-top: 50px;
+}
+.image-event{
     max-width: 300px;
     height: auto;
     margin: 10px;
