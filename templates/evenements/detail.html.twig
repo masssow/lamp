@@ -6,8 +6,9 @@
 {% block body %}
 <div class="container-fluid">
 <div class="row my-5">
-<h1 class="text-center mt-4">{{ event.title}}</h1>
-<div class="date ">
+<div class="col-md-5">
+<img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid mx-auto d-block" height="100px">
+<div class="date mt-4">
 <div class="dateRight">
 <div id="number">{{event.day}}</div>
 <div id="dateText">
@@ -15,16 +16,17 @@
 <div id="anee">{{event.year}}</div>
 </div> 
 </div>
-</div>  
-<div class="col-md-5 event">
-<img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid mx-auto d-block" height="100px">
-<div class="col-md-7 align-self-center">
-    </div>{# .col-md-7 #}
-<p>{{ event.description}}</p>
+</div> 
 </div>
-    
+<div class="col-md-7 align-self-center">
+<h4 class="text-center mt-4">{{ event.title}}</h4>
+
+<p>{{ event.description}}</p>
+{# </div>  #}
+    </div>{# .col-md-7 #}
+</div> 
 </div>
 </div>
 
-<a href="{{ path('app_events')}}" class="btn btn-warning my-3">Autres Evenements</a>
+<a href="{{ path('app_events')}}" class="btn btn-secondary my-3 d-grid gap-2 col-2 mx-auto">Autres Evenements</a>
 {% endblock %}

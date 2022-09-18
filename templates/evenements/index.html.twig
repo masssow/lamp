@@ -22,8 +22,9 @@
 </div> 
 </div>
 </div>  
-
+<a href="{{ path('app_event_detail', {'slug' : event.id} )}}">
 <img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid mx-auto d-block" height="100px">
+</a>
 <p class="para-present">{{ event.description}}</p>
 </div>
     {% endfor %}

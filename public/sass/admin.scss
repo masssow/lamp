@@ -32,35 +32,34 @@ a{
     position: static;
     min-height: 300px;
     z-index: -100;
-}.header-custom, .hc-nous{
+}body > main > div > div > div.header-custom.hc-nous{
     background: url(../images/qui_sommes.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:inherit;
-    background-position: center;
+    background-position: inherit;
 }
-.header-custom, .hc-agir{
-    background: url(../images/header-agir.jpg);
+body > main > div > div > div.header-custom.hc-agir{
+    background: url(../images/pexels-julia.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:inherit;
-    background-position: center;
+    background-position: top;
 }
-.header-custom, .hc-mission{
-    background: url(../images/lamp_pour_le_developpement.jpg);
+body > main > div > div > div.header-custom.hc-mission{
+    background: url(../images/permanancesasso.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:inherit;
-    background-position: center;
-}.header-custom,.hc-evenements{ 
+    background-position:inherit;
+} body > main > div > div > div.header-custom.hc-evenements{ 
     background: url(../images/header-event.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:inherit;
-    background-position: center;
+    background-position: top;
 }
-.header-custom, .hc-actu{
-    background: url(../images/header-article.jpg);
+body > main > div > div > div.header-custom.hc-actu{
+    background: url(../images/pexels-brotin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:inherit;
@@ -275,8 +274,8 @@ header{
     background-color: #011f268e;
     padding: 10px;
     border-radius: 10px;
-}.lien-titre-agir{
-    font-size: 3rem;
+}h2 .lien-titre-agir{
+    font-size: 1.8rem;
     color: $texLight;
     text-align: center;
 }
@@ -292,7 +291,8 @@ header{
     padding: 20px 20px 20px 20px;
     min-height: 500px;
 
-}.nous{
+}
+.nous{
     background-image: linear-gradient(#cdc5c558,#cdc5c5db) ,url(../images/mikael-blomkvist.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -414,16 +414,22 @@ header{
     background-color: $secondary;
     
 }.event{
-    margin-top: 50px;
-    margin-bottom: 50px;
     text-align: center;
+    background-color:$primary;
+    padding: 5px;
+}.image-event{
+    max-width: 300px;
+    height: auto;
+    margin: 10px;
 }
 // Date evenements
 #event-titre{
     text-transform: uppercase;
     color: #011F26;
     text-align: center;
-    font-size: 1.5;
+    font-size: 2rem;
+    margin-top: 80px;
+    margin-bottom: 30px;
 }.titre-event{
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -452,6 +458,14 @@ h3{
     text-align: start;
     font-family: 'Exo 2', sans-serif;
     font-weight: 400
+}
+.image-article{
+    
+}
+
+.permanances{
+    margin-top: 80px;
+
 }
 // icons reseaux sociaux
 .reseau{

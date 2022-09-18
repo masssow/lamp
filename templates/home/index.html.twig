@@ -45,7 +45,7 @@
                 {% for event in event %}
                 <div class="col-md-6 col-lg-4 event">
                     <h3>{{ event.title}}</h3> 
-                    <img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid">
+                    <img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid image-event">
                     <div class="date ">
                             <div class="dateRight">
                                 <div id="number">{{event.day}}</div>
@@ -58,13 +58,13 @@
 
                 
                     <a href="{{ path('app_event_detail', {'slug': event.id} )}}">
-                        <span class="btn btn-dark mb-5 d-grid gap-2 mx-auto ">Savoir plus</span>
+                        <span class="btn btn-dark my-2">Savoir +</span>
                     </a>  
         </div>
                 {% endfor %}
                 <div class="d-grid gap-2 d-md-block mx-auto mb-5">
 
-                    <a href="{{ path('app_events')}}" class="btn btn-secondary col-4">Voir tous les evenements</a>
+                    <a href="{{ path('app_events')}}" class="btn btn-secondary d-grid gap-2 col-2 mx-auto my-3">Voir tous les evenements</a>
                 </div>
         </div>
     </section>
@@ -87,5 +87,8 @@
             </div>
         </div>
     </div>
+    <div class="permanances">
+    <img src="{{ asset('images/permanancesasso.jpg')}}" alt="" class="mx-auto d-block">
+</div>
 </div>
 {% endblock %}
