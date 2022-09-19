@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('admin/messages')]
 class AdmincontactController extends AbstractController
 {
-    #[Route('/', name: 'app_admincontact_index', methods: ['GET'])]
+    #[Route('admin/messag', name: 'app_admincontact_index', methods: ['GET'])]
     public function index(ContactRepository $contactRepository): Response
     {
         return $this->render('admincontact/index.html.twig', [
